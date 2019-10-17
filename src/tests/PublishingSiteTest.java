@@ -1,12 +1,9 @@
 package tests;
 
-import Articles.PublishingSite;
-import org.junit.Assert;
+import LogicLayer.PublishingSite;
 
 import java.util.LinkedList;
 import java.util.List;
-
-import static org.junit.Assert.*;
 
 public class PublishingSiteTest {
     private PublishingSite globes;
