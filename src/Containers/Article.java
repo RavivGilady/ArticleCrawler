@@ -2,9 +2,11 @@ package Containers;
 
 import LogicLayer.Rules;
 
+import javax.xml.bind.DatatypeConverter;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.net.URL;
+import java.security.MessageDigest;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;
@@ -15,21 +17,39 @@ public class Article {
     private List<String> author;
     private List<String> category;
     private String OnSiteID;
-    private UUID OnDataBaseID;
+    private String OnDataBaseID;
     private List<String> title;
     private List<String> publishingDate;
     private String siteName;
-    private String content;
+    private String content; //TODO: add hash to be able to check if the article have changed!
 
-    public Article(String onSiteID,String siteName) {
+    public Article(String onSiteID,String siteID) {
+
+        OnDataBaseID=createIDFromOnSiteIDAndSiteID(onSiteID,siteID);
         author = new LinkedList<>();
         category = new LinkedList<>();
         this.OnSiteID=onSiteID;
-        OnDataBaseID=UUID.randomUUID();
         title = new LinkedList<>();
         publishingDate = new LinkedList<>();
-        this.siteName = siteName;
+        this.siteName = siteID;
         tags = new LinkedList<>();
+
+    }
+
+    private String createIDFromOnSiteIDAndSiteID(String onSiteID, String siteID) {
+        try {
+            MessageDigest md = MessageDigest.getInstance("MD5");
+            String combined = onSiteID + siteID;
+            md.update(combined.getBytes());
+            byte[] digest = md.digest();
+            String myHash = DatatypeConverter.printHexBinary(digest).toUpperCase();
+            return myHash;
+        }
+        catch (Exception e)
+        {
+            throw new RuntimeException("cannot convert article ID: " + onSiteID + " from site: "+ siteID +
+                    ". error message: " + e.getMessage());
+        }
 
     }
 
@@ -76,9 +96,6 @@ public class Article {
         OnSiteID = onSiteID;
     }
 
-    public void setOnDataBaseID(UUID onDataBaseID) {
-        OnDataBaseID = onDataBaseID;
-    }
 
     public void setTitle(List<String> title) {
         if(title!=null)
@@ -106,7 +123,7 @@ public class Article {
         return OnSiteID;
     }
 
-    public UUID getOnDataBaseID() {
+    public String getOnDataBaseID() {
         return OnDataBaseID;
     }
 

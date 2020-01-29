@@ -2,22 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d6ea7bcb-1445-4ab5-869f-5845a0496960" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Containers/Article.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/LogicLayer/PublishingSite.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Crawler.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Crawler.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Articles/Article.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Articles/PublishingSite.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Articles/Rules.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/Containers/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/Containers/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Crawler/LogicLayer/ArticleBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/LogicLayer/ArticleBuilder.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Crawler/examination.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/examination.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Crawler/tests/PublishingSiteTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Crawler/tests/PublishingSiteTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Articles/Article.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Articles/PublishingSite.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Articles/Rules.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicLayer/Rules.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Containers/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Containers/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/examination.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/examination.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/tests/PublishingSiteTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/tests/PublishingSiteTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/~$HLD.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/~WRL0489.tmp" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -30,12 +22,12 @@
     <option name="isMigrated" value="true" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/examination.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/LogicLayer/LogicController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+            <state relative-caret-position="476">
+              <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -44,13 +36,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LogicLayer/Rules.java">
+        <entry file="file://$PROJECT_DIR$/src/Containers/Article.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-532">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="374">
+              <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
               <folding>
-                <element signature="method#Rules#0;class#Rules#0" />
-                <element signature="method#setNotFoundArticleTitles#0;class#Rules#0" />
+                <element signature="method#Article#0;class#Article#0" />
+                <element signature="method#toString#0;class#Article#0" />
+                <element signature="method#setTags#0;class#Article#0" />
+                <element signature="method#setAuthor#0;class#Article#0" />
+                <element signature="method#setCategory#0;class#Article#0" />
+                <element signature="method#setTitle#0;class#Article#0" />
+                <element signature="method#setPublishingDate#0;class#Article#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/examination.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/DataLayer/MySQL_ArticleHanlder.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="407">
+              <caret line="48" selection-start-line="48" selection-end-line="48" />
+              <folding>
+                <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -59,62 +80,22 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
+            <state relative-caret-position="748">
+              <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
               <folding>
+                <element signature="method#ArticleBuilder#0;class#ArticleBuilder#0" />
+                <element signature="method#saveArticle#0;class#ArticleBuilder#0" />
+                <element signature="method#toStringWithNoBrackets#0;class#ArticleBuilder#0" />
+                <element signature="method#extractDataFromTags#0;class#ArticleBuilder#0" />
                 <element signature="method#getTitles#0;class#ArticleBuilder#0" />
-                <element signature="e#1310#1451#1" />
                 <element signature="method#getCategories#0;class#ArticleBuilder#0" />
-                <element signature="e#1633#1809#1" />
                 <element signature="method#getPublishingDate#0;class#ArticleBuilder#0" />
-                <element signature="e#2004#2155#1" />
+                <element signature="method#getTags#0;class#ArticleBuilder#0" />
+                <element signature="method#getContent#0;class#ArticleBuilder#0" />
                 <element signature="method#getBadElements#0;class#ArticleBuilder#0" />
                 <element signature="method#getAuthors#0;class#ArticleBuilder#0" />
-                <element signature="e#3464#3533#1" />
                 <element signature="method#downloadArticle#1;class#ArticleBuilder#0" />
-                <element signature="e#3724#3941#0" />
-                <element signature="e#3789#3931#1" />
-                <element signature="e#3969#4034#0" />
                 <element signature="method#isValidArticlePage#0;class#ArticleBuilder#0" />
-                <element signature="e#4230#4328#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$PROJECT_DIR$/../../libraries/jsoup-1.12.1.jar!/org/jsoup/nodes/Element.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="104">
-              <caret line="71" column="72" selection-start-line="71" selection-start-column="72" selection-end-line="71" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LogicLayer/PublishingSite.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-231">
-              <caret line="9" column="27" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Containers/Article.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="130">
-              <caret line="85" selection-start-line="85" selection-end-line="85" />
-              <folding>
-                <element signature="method#toString#0;class#Article#0" />
-                <element signature="method#setTags#0;class#Article#0" />
-                <element signature="method#setAuthor#0;class#Article#0" />
-                <element signature="method#setCategory#0;class#Article#0" />
-                <element signature="method#setPublishingDate#0;class#Article#0" />
-                <element signature="e#2371#2372#0" expanded="true" />
-                <element signature="e#2401#2402#0" expanded="true" />
-                <element signature="e#2447#2448#0" expanded="true" />
-                <element signature="e#2485#2486#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -158,16 +139,24 @@
         <option value="$PROJECT_DIR$/src/LogicLayer/PublishingSite.java" />
         <option value="$PROJECT_DIR$/src/LogicLayer/LogicController.java" />
         <option value="$PROJECT_DIR$/src/LogicLayer/Rules.java" />
-        <option value="$PROJECT_DIR$/src/Containers/Article.java" />
+        <option value="$PROJECT_DIR$/src/DataLayer/ArticleHandler.java" />
         <option value="$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java" />
+        <option value="$PROJECT_DIR$/src/Containers/Article.java" />
+        <option value="$PROJECT_DIR$/src/DataLayer/MySQL_ArticleHanlder.java" />
         <option value="$PROJECT_DIR$/src/examination.java" />
       </list>
     </option>
   </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="949" />
-    <option name="width" value="980" />
-    <option name="height" value="1031" />
+    <option name="x" value="1457" />
+    <option name="width" value="472" />
+    <option name="height" value="1033" />
   </component>
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
@@ -177,7 +166,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -187,31 +175,13 @@
             </path>
             <path>
               <item name="ArticleCrawler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Crawler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArticleCrawler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Crawler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="Containers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArticleCrawler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Crawler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="LogicLayer" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ArticleCrawler" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Crawler" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -225,7 +195,7 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="create.test.in.the.same.root" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="restartRequiresConfirmation" value="false" />
@@ -311,22 +281,21 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Designer" order="0" />
       <window_info id="UI Designer" order="1" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Image Layers" order="4" />
-      <window_info content_ui="combo" id="Project" order="5" visible="true" weight="0.17894737" />
-      <window_info id="Structure" order="6" side_tool="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="5" sideWeight="0.49731183" visible="true" weight="0.1611336" />
+      <window_info id="Structure" order="6" sideWeight="0.50268817" side_tool="true" weight="0.14898786" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="2" weight="0.3285968" />
       <window_info anchor="bottom" id="Version Control" order="3" weight="0.3285968" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.37655416" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.3285968" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.3090586" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.39964476" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -334,11 +303,12 @@
       <window_info anchor="right" id="Theme Preview" order="0" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Palette&#9;" order="2" />
-      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.32955465" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="5" type="SLIDING" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="6" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="7" weight="0.24939272" />
+      <window_info anchor="right" id="Coverage" order="8" side_tool="true" weight="0.32955465" />
     </layout>
     <layout-to-restore>
       <window_info id="Designer" order="0" />
@@ -373,16 +343,10 @@
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java</url>
-          <line>84</line>
+          <url>file://$PROJECT_DIR$/src/DataLayer/MySQL_ArticleHanlder.java</url>
+          <line>27</line>
           <properties />
-          <option name="timeStamp" value="34" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java</url>
-          <line>42</line>
-          <properties />
-          <option name="timeStamp" value="35" />
+          <option name="timeStamp" value="36" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -390,6 +354,9 @@
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/ArticleCrawler$examination.ic" NAME="examination Coverage Results" MODIFIED="1571697569409" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="watch">
@@ -433,41 +400,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LogicLayer/LogicController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-108">
-          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Containers/Article.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="85" selection-start-line="85" selection-end-line="85" />
-          <folding>
-            <element signature="method#toString#0;class#Article#0" />
-            <element signature="method#setTags#0;class#Article#0" />
-            <element signature="method#setAuthor#0;class#Article#0" />
-            <element signature="method#setCategory#0;class#Article#0" />
-            <element signature="method#setPublishingDate#0;class#Article#0" />
-            <element signature="e#2371#2372#0" expanded="true" />
-            <element signature="e#2401#2402#0" expanded="true" />
-            <element signature="e#2447#2448#0" expanded="true" />
-            <element signature="e#2485#2486#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$PROJECT_DIR$/../../libraries/jsoup-1.12.1.jar!/org/jsoup/nodes/Element.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="104">
-          <caret line="71" column="72" selection-start-line="71" selection-start-column="72" selection-end-line="71" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LogicLayer/Rules.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-532">
@@ -486,34 +418,85 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$PROJECT_DIR$/../../libraries/jsoup-1.12.1.jar!/org/jsoup/nodes/Element.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="71" column="72" selection-start-line="71" selection-start-column="72" selection-end-line="71" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataLayer/ArticleHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="161">
+          <caret line="9" column="50" selection-start-line="9" selection-start-column="50" selection-end-line="9" selection-end-column="50" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LogicLayer/LogicController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="31" column="12" selection-start-line="31" selection-start-column="12" selection-end-line="31" selection-end-column="12" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LogicLayer/ArticleBuilder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
+        <state relative-caret-position="748">
+          <caret line="68" column="9" selection-start-line="68" selection-start-column="9" selection-end-line="68" selection-end-column="9" />
           <folding>
+            <element signature="method#ArticleBuilder#0;class#ArticleBuilder#0" />
+            <element signature="method#saveArticle#0;class#ArticleBuilder#0" />
+            <element signature="method#toStringWithNoBrackets#0;class#ArticleBuilder#0" />
+            <element signature="method#extractDataFromTags#0;class#ArticleBuilder#0" />
             <element signature="method#getTitles#0;class#ArticleBuilder#0" />
-            <element signature="e#1310#1451#1" />
             <element signature="method#getCategories#0;class#ArticleBuilder#0" />
-            <element signature="e#1633#1809#1" />
             <element signature="method#getPublishingDate#0;class#ArticleBuilder#0" />
-            <element signature="e#2004#2155#1" />
+            <element signature="method#getTags#0;class#ArticleBuilder#0" />
+            <element signature="method#getContent#0;class#ArticleBuilder#0" />
             <element signature="method#getBadElements#0;class#ArticleBuilder#0" />
             <element signature="method#getAuthors#0;class#ArticleBuilder#0" />
-            <element signature="e#3464#3533#1" />
             <element signature="method#downloadArticle#1;class#ArticleBuilder#0" />
-            <element signature="e#3724#3941#0" />
-            <element signature="e#3789#3931#1" />
-            <element signature="e#3969#4034#0" />
             <element signature="method#isValidArticlePage#0;class#ArticleBuilder#0" />
-            <element signature="e#4230#4328#1" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/DataLayer/MySQL_ArticleHanlder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="407">
+          <caret line="48" selection-start-line="48" selection-end-line="48" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Containers/Article.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="43" column="40" selection-start-line="43" selection-start-column="40" selection-end-line="43" selection-end-column="40" />
+          <folding>
+            <element signature="method#Article#0;class#Article#0" />
+            <element signature="method#toString#0;class#Article#0" />
+            <element signature="method#setTags#0;class#Article#0" />
+            <element signature="method#setAuthor#0;class#Article#0" />
+            <element signature="method#setCategory#0;class#Article#0" />
+            <element signature="method#setTitle#0;class#Article#0" />
+            <element signature="method#setPublishingDate#0;class#Article#0" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/examination.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
+        <state relative-caret-position="204">
+          <caret line="47" column="52" lean-forward="true" selection-start-line="47" selection-start-column="52" selection-end-line="47" selection-end-column="52" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -560,6 +543,7 @@
       </state>
       <state key="JdkListConfigurable.UI">
         <settings>
+          <last-edited>1.8</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -576,7 +560,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>

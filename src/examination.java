@@ -1,13 +1,16 @@
 import LogicLayer.ArticleBuilder;
 import LogicLayer.Rules;
+
+import javax.xml.bind.DatatypeConverter;
+import java.security.MessageDigest;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.UUID;
 
 public class examination {
     public static void main(String[] args) {
 
-        String ID="1001303826";
-
+        test();
         Rules debugRules=new Rules("https://www.globes.co.il/news/article.aspx?did=","");
         List<String> titlesRule=new LinkedList<>();
         titlesRule.add(".mainPartContent #F_Title");
@@ -16,6 +19,8 @@ public class examination {
 
         List<String> authorRules=new LinkedList<>();
         authorRules.add(".mainPartContent .articleInfo > a");
+        authorRules.add(".mainPartContent .author");
+
         debugRules.setAuthorPath(authorRules);
 
         List<String> datesRules=new LinkedList<>();
@@ -43,8 +48,16 @@ public class examination {
         debugRules.setCategoryPath(categoriesRules);
 
         ArticleBuilder articleBuilder=new ArticleBuilder();
-        articleBuilder.downloadArticle("Globes",debugRules,ID);
 
 
+        String ID="";
+        for (int i = 81766; i < 1101303845; i++) {
+
+            ID = "" + i;
+            articleBuilder.downloadArticle("Globes", debugRules, ID);
+
+        }
     }
+
+    private static void test() {}
 }

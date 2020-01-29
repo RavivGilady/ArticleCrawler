@@ -1,6 +1,8 @@
 package LogicLayer;
 
 import Containers.Article;
+import DataLayer.ArticleHandler;
+import DataLayer.MySQL_ArticleHanlder;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -13,7 +15,12 @@ import java.util.List;
 public class ArticleBuilder {
     private Document fullArticlePage;
     private Rules siteRules;
+    private ArticleHandler articleHandler;
 
+    public ArticleBuilder() {
+
+        articleHandler=new MySQL_ArticleHanlder();
+    }
 
     public void downloadArticle(String siteName, Rules siteRules,String ID) {
         Article article;
@@ -22,21 +29,44 @@ public class ArticleBuilder {
         downloadArticle(ID);
         if(fullArticlePage!=null) {
             article = buildArticle(siteName, ID);
-            System.out.println(article); //TODO : delete
+            if(article!=null) {
+                saveArticle(article);
+            }
         }
     }
 
-    private Article buildArticle(String siteName, String ID) {
-        Article newArticle=new Article(ID,siteName);
-        newArticle.setTitle(getTitles());
-        newArticle.setCategory(getCategories());
-        newArticle.setAuthor(getAuthors());
-        newArticle.setPublishingDate(getPublishingDate());
-        newArticle.setContent(getContent());
-        newArticle.setTags(getTags());
-        return newArticle;
+    private void saveArticle(Article article) {
+        String author= toStringWithNoBrackets(article.getAuthor());
+        String categories=toStringWithNoBrackets(article.getCategory());
+        String titles=toStringWithNoBrackets(article.getTitle());
+        String publishingDates=toStringWithNoBrackets(article.getPublishingDate());
+        articleHandler.saveArticle(author,categories,article.getOnSiteID(),article.getOnDataBaseID().toString()
+                ,titles,publishingDates,article.getSiteName(),article.getContent());
+    }
+
+    private String toStringWithNoBrackets(List<String> list) {
+    String output=list.toString();
+    return (output.substring(1,output.length()-1));
 
     }
+
+    private Article buildArticle(String siteName, String ID) {
+        try {
+            Article newArticle=new Article(ID, siteName);
+            newArticle.setTitle(getTitles());
+            newArticle.setCategory(getCategories());
+            newArticle.setAuthor(getAuthors());
+            newArticle.setPublishingDate(getPublishingDate());
+            newArticle.setContent(getContent());
+            newArticle.setTags(getTags());
+            return newArticle;
+
+        }
+        catch (Exception e){
+            System.out.println(e.getMessage());
+            return null;
+        }
+        }   
 
     private String extractDataFromTags (String query){
         String data="";
@@ -117,12 +147,12 @@ public class ArticleBuilder {
     private List<String> getAuthors () {
         List<String> authors = new LinkedList<>();
         for (String authorPath : siteRules.getAuthorPath()) {
-            authors.add(extractDataFromTags(authorPath));
+            String author=extractDataFromTags(authorPath);
+            if (author!=null && !author.equals(""))
+                authors.add(author);
         }
         return authors;
     }
-
-
 
     private  void downloadArticle(String ID){
 
