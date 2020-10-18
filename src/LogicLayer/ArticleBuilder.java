@@ -30,6 +30,7 @@ public class ArticleBuilder {
         if(fullArticlePage!=null) {
             article = buildArticle(siteName, ID);
             if(article!=null) {
+                System.out.println("***saved article!! ID:" + ID + "***");
                 saveArticle(article);
             }
         }
@@ -66,7 +67,7 @@ public class ArticleBuilder {
             System.out.println(e.getMessage());
             return null;
         }
-        }   
+        }
 
     private String extractDataFromTags (String query){
         String data="";

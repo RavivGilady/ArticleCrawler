@@ -1,4 +1,5 @@
 import LogicLayer.ArticleBuilder;
+import LogicLayer.Downloader;
 import LogicLayer.Rules;
 
 import javax.xml.bind.DatatypeConverter;
@@ -49,14 +50,27 @@ public class examination {
 
         ArticleBuilder articleBuilder=new ArticleBuilder();
 
+        List<Thread> downloadThreads=new LinkedList<>();
+        int startingArticle=473157;
+        int numOfWantedThread=5;
+        for (int i = 0; i < numOfWantedThread; i++) {
+            Thread t=new Downloader("Globes",debugRules,startingArticle+i,numOfWantedThread);
+            downloadThreads.add(t);
+        }
+        for(Thread t : downloadThreads){
 
-        String ID="";
-        for (int i = 81766; i < 1101303845; i++) {
+            t.start();
+        }
+        try {
+            for(Thread t : downloadThreads){
 
-            ID = "" + i;
-            articleBuilder.downloadArticle("Globes", debugRules, ID);
+                t.join();
+            }
+        }
+        catch (Exception e){
 
         }
+
     }
 
     private static void test() {}

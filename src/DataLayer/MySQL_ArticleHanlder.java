@@ -24,7 +24,7 @@ public class MySQL_ArticleHanlder implements ArticleHandler {
                 "VALUES (?,?,?,?,?,?,?,?)";
 
         try{
-            //Class.forName("com.mysql.jdbc.Driver");
+            Class.forName("com.mysql.jdbc.Driver");
             Connection conn = DriverManager.getConnection(url, userName, password);
 
 
@@ -41,6 +41,7 @@ public class MySQL_ArticleHanlder implements ArticleHandler {
             preparedStatement.executeUpdate();
             preparedStatement.close();
             conn.close();
+
         } catch (SQLException e) {
             System.err.format("SQL State: %s\n%s", e.getSQLState(), e.getMessage());
         } catch (Exception e) {
